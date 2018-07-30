@@ -57,6 +57,10 @@ class UserStorage():
         except:
             return "An error occured while creating your account"
 
-    def check_role(self,role):
-        pass
+
+    @classmethod
+    def get_user_by_id(cls,user_id):
+        cls.user = next(filter(lambda x: x['id'] == user_id, cls.Users), None)
+        return cls.user['role']
+
 
