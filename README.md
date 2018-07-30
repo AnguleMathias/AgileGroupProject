@@ -29,5 +29,4 @@ The project focuses on the following aspects:
 
 ##Getting started:
   - clone and cd into project folder
-  - run . ./Configure
   - run python run.py
