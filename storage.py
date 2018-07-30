@@ -1,4 +1,4 @@
-class Comment():
+class CommentStorage():
     """
     This class stores comments and also have methods that will manipulate
     those comments.
