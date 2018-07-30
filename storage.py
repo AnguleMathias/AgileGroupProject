@@ -35,3 +35,28 @@ class CommentStorage():
     def all_items(self):
         """fetches all comments"""
         return self.Comments
+
+
+
+class UserStorage():
+    """
+    This class stores Users and also have methods that will manipulate
+    those comments.
+    """
+    Users = []
+
+    @classmethod
+    def get_by_id(cls,user_id):
+        cls.user = next(filter(lambda x: x['id'] == user_id, cls.Users), None)
+        return cls.user
+    #saves a new user to the database
+    def save_user(self,user):
+        try:
+            self.Users.append(user)
+            return "User created Successfully"
+        except:
+            return "An error occured while creating your account"
+
+    def check_role(self,role):
+        pass
+
